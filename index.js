@@ -81,6 +81,7 @@ const addTodoToDOM = (todo) => {
 const toggleEditTodo = (todo, inputField, editButton) => {
   todo.isEditing = !todo.isEditing;
   inputField.readOnly = !todo.isEditing;
+  editButton.classList.toggle('save-btn',todo.isEditing)
   editButton.textContent = todo.isEditing ? "Save" : "Edit";
   inputField.classList.toggle("todo-editing", todo.isEditing);
   inputField.classList.toggle("todo-text", !todo.isEditing);
